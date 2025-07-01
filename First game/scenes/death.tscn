@@ -1,0 +1,81 @@
+[gd_scene load_steps=6 format=3 uid="uid://dyyijq7w8eg0e"]
+
+[ext_resource type="Script" path="res://scripts/death.gd" id="1_3m8pw"]
+[ext_resource type="Texture2D" uid="uid://2wboprac0qed" path="res://background/died.png" id="2_l01tn"]
+[ext_resource type="Texture2D" uid="uid://cqyfjom6kuwqv" path="res://background/kill-removebg-preview.png" id="3_lpdgv"]
+[ext_resource type="FontFile" uid="uid://crjbn4vv0wasd" path="res://assets/fonts/PixelOperator8.ttf" id="4_q7b7m"]
+[ext_resource type="FontFile" uid="uid://bpyr4d3ltymi" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="5_trtl5"]
+
+[node name="death" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 3.0
+offset_right = 1.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3m8pw")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_l01tn")
+
+[node name="ColorRect" type="ColorRect" parent="TextureRect"]
+layout_mode = 2
+offset_top = 259.0
+offset_right = 1154.0
+offset_bottom = 399.0
+color = Color(0.329158, 0.329158, 0.329158, 1)
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect"]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 253.0
+offset_right = 272.0
+offset_bottom = 377.0
+texture = ExtResource("3_lpdgv")
+
+[node name="retry" type="Button" parent="TextureRect"]
+layout_mode = 0
+offset_left = 691.0
+offset_top = 436.0
+offset_right = 1034.0
+offset_bottom = 504.0
+theme_override_fonts/font = ExtResource("4_q7b7m")
+theme_override_font_sizes/font_size = 40
+text = "retry
+"
+
+[node name="quit" type="Button" parent="TextureRect"]
+layout_mode = 0
+offset_left = 123.0
+offset_top = 434.0
+offset_right = 465.0
+offset_bottom = 504.0
+theme_override_fonts/font = ExtResource("4_q7b7m")
+theme_override_font_sizes/font_size = 40
+text = "Quit
+"
+
+[node name="Label" type="Label" parent="TextureRect"]
+layout_mode = 2
+offset_left = 17.0
+offset_top = 309.0
+offset_right = 1145.0
+offset_bottom = 357.0
+theme_override_fonts/font = ExtResource("5_trtl5")
+theme_override_font_sizes/font_size = 48
+text = "Game over 
+"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="TextureRect/retry" to="." method="_on_retry_pressed"]
+[connection signal="pressed" from="TextureRect/quit" to="." method="_on_quit_pressed"]
