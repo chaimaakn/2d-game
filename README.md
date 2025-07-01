@@ -6,7 +6,7 @@ Un jeu de plateforme en 2D développé avec le moteur **Godot Engine**.
 
 ## 📽️ Aperçu du jeu
 
-[![Voir la vidéo](https://drive.google.com/file/d/1zgWiw7AdHPwyyMVhUWTmqV8ADm2OOHVZ/view?usp=sharing)
+[[Voir la vidéo](https://drive.google.com/file/d/1zgWiw7AdHPwyyMVhUWTmqV8ADm2OOHVZ/view?usp=sharing)
 
 
 
